@@ -91,7 +91,8 @@ function desktopHover() {
             if (title === projectTitles[i]) {
                 timer = revealPreview(projectTitles[i]);
                 let descriptHeight = projectDescriptions[i].childNodes[1].offsetHeight;
-                projectDescriptions[i].style.height = descriptHeight;
+                console.log(descriptHeight)
+                projectDescriptions[i].style.height = `${descriptHeight}px`;
                 projectDescriptions[i].style.paddingTop = '5px';
             }
         }
@@ -149,9 +150,9 @@ function desktopControl() {
 }
 
 // add height to menu container so description reveal does not bump up links on right side
-function bumpHeight() {
+function fixHeight() {
     let menuContHeight = document.querySelector('.menu-container').offsetHeight;
-    document.querySelector('.menu-container').style.setProperty('height', menuContHeight + 20)
+    document.querySelector('.menu-container').style.setProperty('height', `${menuContHeight}px`)
 }
 
 // second tap on mobile for project links if description is already open
@@ -185,7 +186,7 @@ function tapMobile() {
             projectDescriptions[i].style.height = '0';
             if (title === projectTitles[i]) {
                 let descriptHeight = projectDescriptions[i].childNodes[1].offsetHeight;
-                projectDescriptions[i].style.height = descriptHeight;
+                projectDescriptions[i].style.height = `${descriptHeight}px`;
                 projectDescriptions[i].style.paddingTop = '5px';
                 title.parentNode.classList.add('active');
             }
@@ -230,12 +231,12 @@ function closeDescriptMobile() {
 if (/Mobi|Android/i.test(navigator.userAgent)) {
     // mobile
     tapMobile();
-    bumpHeight();
+    fixHeight();
     closeDescriptMobile();
 } else {
     // desktop
     desktopControl();
-    bumpHeight();
+    fixHeight();
     // touch screen desktop
     tapMobile();
     closeDescriptMobile();
