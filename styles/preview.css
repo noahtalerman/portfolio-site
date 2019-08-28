@@ -1,0 +1,9 @@
+.preview-container {
+    display: none;
+}
+
+@media screen and (min-width: 720px) {
+    .preview-container {
+        display: inline;
+    }
+}

@@ -1,0 +1,121 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #0c0018;
+    max-height: 100vh;
+}
+
+ul {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-family: 'Numans', sans-serif;
+    color: #b9e0fe;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.header {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    font-family: 'Shrikhand', cursive;
+    /* font-family: 'blonde'; */
+    letter-spacing: -1px;
+    color: #b9e0fe;
+    text-shadow: 0 0 30px #59baff;
+    padding: 0 5px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100vw;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Numans', sans-serif;
+}
+
+.project-container {
+    display: block;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+
+.wavy-description {
+    padding-bottom: 10vh;
+}
+
+.project-title {
+    border-bottom: 1px solid;
+    text-shadow: 0 0 10px #59baff, 0.5px 0 0 #59baff, -0.5px 0 0 #59baff;
+    transition: all 0.25s ease-in-out;
+}
+
+.project-description {
+    height: 0;
+    font-family: 'proxima nova', sans-serif;
+    font-weight: 500;
+    transition: all 0.25s ease-in-out;
+    overflow: hidden;
+    color: #ffffff;
+    max-width: 40vw;
+}
+
+.preview-container {
+    position: absolute;
+    z-index: -1;
+    left: 60%;
+    -webkit-transform: translateX(-60%);
+    transform: translateX(-60%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+video {
+    max-height: 450px;
+    max-width: 500px;
+}
+
+.links-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-item {
+    text-align: right;
+}
+
+.links-title {
+    text-shadow: 0 0 10px #59baff, 0.5px 0 0 #59baff, -0.5px 0 0 #59baff;
+    border-bottom: 1px solid;
+    transition: all 0.25s ease-in-out;
+}
