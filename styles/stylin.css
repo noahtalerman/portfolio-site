@@ -1,7 +1,15 @@
+:root {
+    --background-color: #0c0018;
+    --light-blue: #b9e0fe;
+    --dark-blue: #59baff;
+    --light-yellow: #FFFFEE;
+    --dark-yellow: #feffbf;
+}
+
 body {
     padding: 0;
     margin: 0;
-    background: #0c0018;
+    background: var(--background-color);
     height: 100vh;
 }
 
@@ -19,7 +27,7 @@ button {
     padding: 0;
     font-family: proxima-nova, sans-serif;
     font-weight: 700;
-    color: #b9e0fe;
+    color: var(--light-blue);
 }
 
 button:focus {
@@ -38,8 +46,8 @@ button:hover {
     font-family: futura-pt, sans-serif;
     font-weight: 800;
     font-style: normal;
-    color: #b9e0fe;
-    text-shadow: 0 0 20px #59baff;
+    color: var(--light-blue);
+    text-shadow: 0 0 20px var(--dark-blue);
     padding: 0 5px;
 }
 
@@ -73,7 +81,7 @@ button:hover {
 
 .project-title {
     border-bottom: 1px solid;
-    text-shadow: 0 0 10px #59baff, 0.5px 0 0 #59baff, -0.5px 0 0 #59baff;
+    text-shadow: 0 0 10px var(--dark-blue), 0.5px 0 0 var(--dark-blue), -0.5px 0 0 var(--dark-blue);
     transition: all 0.25s ease-in-out;
 }
 
@@ -83,18 +91,12 @@ button:hover {
     font-weight: 400;
     transition: all 0.25s ease-in-out;
     overflow: hidden;
-    color: #FFFFEE;
+    color: var(--light-yellow);
     max-width: 40vw;
 }
 
 .preview-container {
-    position: absolute;
-    z-index: -1;
-    left: 60%;
-    -webkit-transform: translateX(-60%);
-    transform: translateX(-60%);
-    opacity: 0;
-    transition: all 0.5s linear;
+    display: none;
 }
 
 video {
@@ -118,7 +120,7 @@ video {
 }
 
 .links-title {
-    text-shadow: 0 0 10px #59baff, 0.5px 0 0 #59baff, -0.5px 0 0 #59baff;
+    text-shadow: 0 0 10px var(--dark-blue), 0.5px 0 0 var(--dark-blue), -0.5px 0 0 var(--dark-blue);
     border-bottom: 1px solid;
     transition: all 0.25s ease-in-out;
 }
