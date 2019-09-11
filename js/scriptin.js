@@ -39,6 +39,19 @@ function revealPreview(project) {
     return prevTimer;
 }
 
+function revealTech(project) {
+    console.log(project.childNodes[3])
+    let tech = project.childNodes[3];
+    tech.style.setProperty('opacity', '1');
+    tech.style.setProperty('transform', 'translate(0, 0)');
+}
+
+function hideTech(project) {
+    let tech = project.childNodes[1].childNodes[3];
+    tech.style.setProperty('opacity', '0');
+    tech.style.setProperty('transform', 'translate(-20px, 0)');
+}
+
 function dimText(text) {
     setTimeout(function() {
         if(text.classList[1] !== 'active') {
@@ -62,16 +75,17 @@ function desktopMouseLeave(timer) {
     let projectTitles = document.querySelectorAll('.project-title');
     let projectDescriptions = document.querySelectorAll('.project-description');
     projectItems.forEach(item => item.addEventListener('mouseleave', function() {
-        item.childNodes[1].classList.remove('active');
+        item.childNodes[1].childNodes[1].classList.remove('active');
         for (let i = 0; i < projectItems.length; ++i) {
             if (item === projectItems[i]) {
                 hidePreview();
+                hideTech(item);
                 window.clearTimeout(timer);
                 projectDescriptions[i].style.height = '0';
                 projectDescriptions[i].style.paddingTop = '0';
                 projectTitles[i].style.color = '#59baff';
                 projectTitles[i].style.textShadow = '0 0 0 #59baff';
-                dimText(item.childNodes[1]);
+                dimText(item.childNodes[1].childNodes[1]);
             }
         }
     }));
@@ -89,9 +103,9 @@ function desktopHover() {
         title.style.textShadow = '0 0 10px #feffbf, 0 0 30px #feffbf, 0.5px 0 0px #feffbf, -0.5px 0 0px #feffbf';
         for (let i = 0; i < projectTitles.length; ++i) {
             if (title === projectTitles[i]) {
+                revealTech(title.parentNode);
                 timer = revealPreview(projectTitles[i]);
                 let descriptHeight = projectDescriptions[i].childNodes[1].offsetHeight;
-                console.log(descriptHeight)
                 projectDescriptions[i].style.height = `${descriptHeight}px`;
                 projectDescriptions[i].style.paddingTop = '5px';
             }
@@ -158,8 +172,6 @@ function fixHeight() {
 // second tap on mobile for project links if description is already open
 function openProject(project) {
     let activeItem = document.querySelector('.active');
-    console.log('activeItem', activeItem)
-    console.log('project', project.parentNode)
     if (activeItem === project.parentNode) {
         let classes = activeItem.classList;
         window.location.href = redirectLinks[classes[1]]

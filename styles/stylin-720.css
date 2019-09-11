@@ -69,7 +69,25 @@
     }
     
     .wavy-description {
-        padding-bottom: 10vh;
+        padding-bottom: 20vh;
+    }
+
+    .project__btn-wrapper {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .project__btn-wrapper ul {
+        opacity: 0;
+        transform: translate(-20px, 0);
+        transition: transform 0.4s ease-in-out, opacity 0.4s linear;
+        color: #FFFFEE;
+        font-family: proxima-nova, sans-serif;
+        font-weight: 700;
+    }
+
+    .project__btn-wrapper svg:hover {
+        cursor: pointer;
     }
     
     .project-title {
@@ -82,7 +100,7 @@
         height: 0;
         font-family: proxima nova, sans-serif;
         font-weight: 400;
-        transition: all 0.25s ease-in-out;
+        transition: all 0.4s ease-in-out;
         overflow: hidden;
         color: #FFFFEE;
         max-width: 40vw;
