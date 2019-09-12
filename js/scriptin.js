@@ -186,6 +186,7 @@ function tapMobile() {
     let links = document.querySelectorAll('.links-item');
     projectTitles.forEach(title => title.addEventListener('touchend', function() {
         openProject(title);
+        revealTech(title.parentNode);
         title.style.color = '#feffbf';
         title.style.textShadow = '0 0 30px #feffbf, 0.5px 0 0 #feffbf, -0.5px 0 0 #feffbf';
         for (let i = 0; i < projectTitles.length; ++i) {

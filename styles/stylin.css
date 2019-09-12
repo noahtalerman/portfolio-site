@@ -79,6 +79,28 @@ button:hover {
     padding-bottom: 10vh;
 }
 
+.project__btn-wrapper {
+    display: flex;
+    align-items: flex-end;
+}
+
+.project__btn-wrapper ul {
+    opacity: 0;
+    transform: translate(-20px, 0);
+    transition: transform 0.4s ease-in-out, opacity 0.4s linear;
+    color: #FFFFEE;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+}
+
+.project__btn-wrapper ul {
+    display: none;
+}
+
+.project__btn-wrapper ul:hover {
+    cursor: pointer;
+}
+
 .project-title {
     border-bottom: 1px solid;
     text-shadow: 0 0 10px var(--dark-blue), 0.5px 0 0 var(--dark-blue), -0.5px 0 0 var(--dark-blue);
