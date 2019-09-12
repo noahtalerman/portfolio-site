@@ -172,7 +172,7 @@ function fixHeight() {
 // second tap on mobile for project links if description is already open
 function openProject(project) {
     let activeItem = document.querySelector('.active');
-    if (activeItem === project.parentNode) {
+    if (activeItem === project.parentNode.parentNode) {
         let classes = activeItem.classList;
         window.location.href = redirectLinks[classes[1]]
     }
@@ -201,7 +201,7 @@ function tapMobile() {
                 let descriptHeight = projectDescriptions[i].childNodes[1].offsetHeight;
                 projectDescriptions[i].style.height = `${descriptHeight}px`;
                 projectDescriptions[i].style.paddingTop = '5px';
-                title.parentNode.classList.add('active');
+                title.parentNode.parentNode.classList.add('active');
             }
         }
     }));
