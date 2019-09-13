@@ -188,7 +188,7 @@ function tapMobile() {
         openProject(title);
         revealTech(title.parentNode);
         title.style.color = '#feffbf';
-        title.style.textShadow = '0 0 30px #feffbf, 0.5px 0 0 #feffbf, -0.5px 0 0 #feffbf';
+        title.style.textShadow = '0 0 10px #feffbf, 0.5px 0 0 #feffbf, -0.5px 0 0 #feffbf';
         for (let i = 0; i < projectTitles.length; ++i) {
             projectItems[i].classList.remove('active');
             if (projectTitles[i] !== title) {
