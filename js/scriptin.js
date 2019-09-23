@@ -2,6 +2,7 @@
 const redirectLinks = {
     calc: "https://ez-calc.herokuapp.com",
     pixxel: "https://pixxel-art.herokuapp.com",
+    wellnest: "https://wellnest.co",
     wavy: "https://wavy-rps.herokuapp.com",
     github: "https://github.com/noahtalerman",
     dribbble: "https://dribbble.com/noahtal"
@@ -32,8 +33,8 @@ function revealPreview(project) {
             preview.innerHTML = '<video muted loop autoplay src="images/trim-2-720p.mov"></video>'
         } else if (project.textContent === 'pixxel-art') {
             preview.innerHTML = '<video muted loop autoplay src="images/trim-pixxel-720p.mov"></video>'
-        } else if (project.textContent === 'wavy-rps') {
-            preview.innerHTML = '<video muted loop autoplay src="images/wavy-prev-720p.mov"></video>'
+        } else if (project.textContent === 'wellnest.co') {
+            preview.innerHTML = '<video muted loop autoplay src="images/wellnest-demo720.mov"></video>'
         }
     }, 1000);
     return prevTimer;
