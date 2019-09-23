@@ -84,7 +84,7 @@ button:hover {
     align-items: flex-end;
 }
 
-.project__btn-wrapper ul {
+.tech-list {
     opacity: 0;
     transform: translate(-20px, 0);
     transition: transform 0.4s ease-in-out, opacity 0.4s linear;
@@ -93,11 +93,13 @@ button:hover {
     font-weight: 700;
 }
 
-.project__btn-wrapper ul {
-    display: none;
+@media screen and (max-width: 400px) {
+    .tech-list {
+        display: none;
+    }
 }
 
-.project__btn-wrapper ul:hover {
+.tech-list:hover {
     cursor: pointer;
 }
 
