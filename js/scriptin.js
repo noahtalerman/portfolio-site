@@ -5,7 +5,8 @@ const redirectLinks = {
     wellnest: "https://wellnest.co",
     wavy: "https://wavy-rps.herokuapp.com",
     github: "https://github.com/noahtalerman",
-    dribbble: "https://dribbble.com/noahtal"
+    dribbble: "https://dribbble.com/noahtal",
+    linkedin: "https://linkedin.com/noahtalerman"
 }
 
 function getBrowser() {
