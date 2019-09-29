@@ -6,7 +6,7 @@ const redirectLinks = {
     wavy: "https://wavy-rps.herokuapp.com",
     github: "https://github.com/noahtalerman",
     dribbble: "https://dribbble.com/noahtal",
-    linkedin: "https://linkedin.com/noahtalerman"
+    linkedin: "https://linkedin.com/in/noah-talerman"
 }
 
 function getBrowser() {
