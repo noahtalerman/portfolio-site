@@ -35,7 +35,7 @@ function revealPreview(project) {
         } else if (project.textContent === 'pixxel-art') {
             preview.innerHTML = '<video muted loop autoplay src="images/trim-pixxel-720p.mov"></video>'
         } else if (project.textContent === 'wellnest.co') {
-            preview.innerHTML = '<video muted loop autoplay src="images/wellnest-demo720.mov"></video>'
+            preview.innerHTML = '<video muted loop autoplay src="images/wellnestvid-720.mov"></video>'
         }
     }, 1000);
     return prevTimer;
